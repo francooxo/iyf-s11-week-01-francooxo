@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+</head>
+<body>
+
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Contact Me</h2>
+        
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Send a Message</legend>
+
+                <p>
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+                </p>
+
+                <p>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number (Optional):</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+1234567890">
+                </p>
+
+                <p>
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject">
+                        <option value="general">General Inquiry</option>
+                        <option value="project">Project Collaboration</option>
+                        <option value="support">Technical Support</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="message">Message (Minimum 50 characters):</label><br>
+                    <textarea id="message" name="message" rows="5" cols="40" minlength="50" placeholder="Write your detailed message here..." required></textarea>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Subscribe to newsletter</label>
+                </p>
+
+                <p>
+                    <button type="submit">Submit Form</button>
+                </p>
+
+            </fieldset>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026</p>
+    </footer>
+
+</body>
+</html>
