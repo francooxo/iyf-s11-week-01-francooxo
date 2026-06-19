@@ -18,3 +18,5 @@ Welcome to my Task 2 assignment repository for my technical portfolio track. Thi
 As part of Task 2.5, I published a short technical breakdown discussing the critical nature of semantic elements and accessible web architecture.
 
 🔗 **Read my full article here:** https://dev.to/francooxo/why-semantic-html-and-accessibility-are-not-optional-in-modern-web-development-4ob0
+
+🖥️ **Live Deployed Portfolio:** https://francooxo.github.io/iyf-s11-week-01-francooxo/
