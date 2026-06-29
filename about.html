@@ -1,55 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>About Me</title>
+    <title>Box Model Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 2rem;
+            background-color: #f4f4f9;
+        }
+        h2 { 
+            margin-top: 2rem; 
+        }
+        .box-container { 
+            display: flex; 
+            gap: 20px; 
+            margin-bottom: 2rem; 
+        }
+        .base-box {
+            width: 150px;
+            height: 150px;
+            background-color: #4f46e5;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .padding-box { 
+            padding: 30px; 
+            background-clip: content-box; 
+        }
+        .border-box { 
+            border: 10px solid #212529; 
+        }
+        .margin-box { 
+            margin-right: 40px; 
+        }
+        .fixed-box {
+            box-sizing: border-box;
+            width: 300px;
+            padding: 20px;
+            border: 5px solid #4f46e5;
+            background-color: #e0e7ff;
+        }
+        .card-component {
+            box-sizing: border-box;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid gray;
+            border-radius: 8px;
+            background-color: white;
+        }
+        .card-img {
+            width: 100%;
+            height: 150px;
+            background-color: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+        }
+        .card-title {
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+        .card-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: #4f46e5;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
 </head>
-
 <body>
 
-    <header class="site-header">
-        <h1 class="logo">Francis Osoro</h1>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><strong><a href="about.html" class="active">About</a></strong></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <h1>Box Model Assignment Exercises</h1>
 
-    <main class="container">
-        <section>
-            <h2>My Background & Story</h2>
-            <p>I am a driven technical student working to master core programming fundamentals and computer science concepts. My goal is to build a rock-solid logical foundation to create secure, scalable software solutions.</p>
-        </section>
+    <h2>Exercise 1: Box Model Visualization</h2>
+    <div class="box-container">
+        <div class="base-box">Content Only</div>
+        <div class="base-box padding-box">Extra Padding</div>
+        <div class="base-box border-box">Visible Border</div>
+        <div class="base-box margin-box">Right Margin</div>
+    </div>
 
-        <section>
-            <h2>Core Skills I'm Building</h2>
-            <ul>
-                <li>Programming Fundamentals (Python)</li>
-                <li>Git & GitHub Version Control</li>
-                <li>Web Layouts (Semantic HTML)</li>
-                <li>Problem Solving & Script Automation</li>
-            </ul>
-        </section>
+    <h2>Exercise 2: Fixed Debugged Box (Exactly 300px Wide)</h2>
+    <div class="fixed-box">
+        This box uses border-box to absorb padding safely!
+    </div>
 
-        <section>
-            <h2>Education Timeline</h2>
-            <ul>
-                <li><strong>University of the People</strong> – B.S. Computer Science (Current Student)</li>
-            </ul>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <p>&copy; 2026 Francis Osoro</p>
-    </footer>
+    <h2>Exercise 3: Custom Card Component</h2>
+    <div class="card-component">
+        <div class="card-img">Image Placeholder</div>
+        <h3 class="card-title">Card Component Title</h3>
+        <p>This component uses custom strict margin constraints and proportional box layout mechanics.</p>
+        <button class="card-btn">Click Action</button>
+    </div>
 
 </body>
-
 </html>
