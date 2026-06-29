@@ -1,0 +1,197 @@
+/* ==========================================================================
+   1. TYPOGRAPHY SYSTEM (Google Fonts)
+   ========================================================================== */
+/* Cleaned up into a single import line loading Inter (sans-serif) and Playfair Display (serif) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #212529;
+    background-color: #ffffff;
+}
+
+/* Explicitly setting your headings to use the loaded Google Font */
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   2. FLEXBOX NAVIGATION (Mobile-First Default)
+   ========================================================================== */
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e9ecef;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    /* Stack name above links on mobile */
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    /* Use serif font for branding */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4f46e5;
+    /* Modern accent color */
+}
+
+.nav-links {
+    display: flex;
+    /* Activates Flexbox on the list items */
+    list-style: none;
+    /* Removes bullet points */
+    gap: 1.25rem;
+    /* Handles clean spacing between links */
+}
+
+.nav-links a {
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    color: #495057;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #4f46e5;
+    /* Highlight active or hovered link */
+}
+
+/* ==========================================================================
+   3. RESPONSIVE LAYOUT UNLOCK (Tablets & Desktops)
+   ========================================================================== */
+@media (min-width: 768px) {
+    .site-header {
+        flex-direction: row;
+        /* Align name and links on a horizontal line */
+        justify-content: space-between;
+        /* Push name to left, links to far right */
+        padding: 1rem 4rem;
+        /* Extra padding for wider screens */
+    }
+}
+
+/* Simple Container styling for your main content */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   4. CSS GRID GALLERY STYLES
+   ========================================================================== */
+.intro-text {
+    margin-bottom: 2rem;
+    color: #6c757d;
+}
+
+/* The Grid Parent Container */
+.project-gallery {
+    display: grid;
+    /* Automatically wraps items into columns based on size, mobile-first friendly */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    /* Replaces the old <hr> lines with clean layout space */
+}
+
+/* Individual Project Cards (Grid Items) */
+.project-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    padding: 1.5rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    /* Uses flex inside the grid card to stack content neatly */
+    gap: 1rem;
+}
+
+.project-card h3 {
+    font-family: 'Inter', sans-serif;
+    /* Keep card titles clean and readable */
+    font-size: 1.25rem;
+    color: #212529;
+}
+
+/* Making sure your project placeholder images are responsive */
+.project-img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    background-color: #e9ecef;
+    /* Gives a placeholder tint if svgs are missing */
+}
+
+/* Simple Footer alignment */
+.site-footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid #e9ecef;
+    color: #6c757d;
+}
+
+/* ==========================================================================
+   TASK 4.4 ACCESSIBILITY & INTERACTIVE POLISH
+   ========================================================================== */
+
+/* Smooth Transitions for links and buttons */
+a,
+button,
+input,
+select,
+textarea {
+    transition: all 0.3s ease;
+}
+
+/* Accessible Focus States when tab-navigating */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #4f46e5;
+    outline-offset: 2px;
+}
+
+/* Styled Form Button Polish */
+button[type="submit"] {
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Hover effects for interactive buttons */
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #4338ca;
+    /* Darkens slightly on hover */
+}
